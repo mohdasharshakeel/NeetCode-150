@@ -54,5 +54,12 @@ int main(){
     return 0;
 }
 
-
+//! optimize way : with one map TC - 0(n) SC - 0(n)
 //?  Valid Anagram check karne ke liye hum dono strings ki length pehle compare karte hain, phir ek hi map me pehli string ke characters ka count increase aur doosri string ke characters ka count decrease karte hain, jisse same characters ek-dusre ko cancel kar dete hain, aur end me agar sabhi characters ka final count zero hota hai to strings anagram hoti hain, warna nahi.
+
+//! brute force 
+//? Is approach me hum nested loop lagate hain, matlab pehli string ke har character ke liye doosri string ke saare characters check karte hain.
+//? Pehla loop pehli string ke first character se start hota hai, aur us character ko doosri string ke har character se compare karta hai.
+//? Agar match mil jaata hai, to hum us matched character ko mark ya remove kar dete hain taaki wo dubara use na ho.
+//? Phir pehli string ke next character ke liye wahi process repeat hota hai.
+//? Agar end tak pehli string ka har character ko doosri string me ek unique match mil jaata hai, to strings anagram hoti hain, warna nahi.
